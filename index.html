@@ -1,55 +1,214 @@
-<section>
-    <h2>Featured Projects</h2>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio · Oscar Sørensen</title>
 
-    <h3>1. Python CRUD Application (In MySQL)</h3>
-    <p>
-        Menu-based console program that performs CRUD operations directly on a MySQL database using Python.<br>
-        <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/2Prog/examprog.py" target="_blank">
-            View project on GitHub
-        </a>
-    </p>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <h3>2. SQL Blog/Portfolio Database</h3>
-    <p>
-        Relational MySQL database with normalized tables, foreign keys, sample data, LEFT JOIN queries, and a reusable view.
-        Includes full SQL workflow: schema creation, relationships, CRUD operations, and user permissions.<br>
-        <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/1BDD/examfixed.sql" target="_blank">
-            View project on GitHub
-        </a>
-    </p>
+    <style>
+        html {
+            background: #111;
+            font-family: "Fira Code", monospace;
+            font-size: 14px;
+            color: #DDD;
+        }
 
-    <h3>3. HTML/CSS Blog Template</h3>
-    <p>
-        Clean responsive blog layout using semantic HTML and structured CSS.<br>
-        <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/3LDM/EXAM.LDM.html" target="_blank">
-            View project on GitHub
-        </a>
-    </p>
+        body {
+            background: #1E1E1E;
+            width: 900px;
+            margin: 40px auto;
+            display: flex;
+            border-radius: 6px;
+            overflow: auto;
+            box-shadow: 0 0 25px rgba(0,0,0,0.8);
+        }
 
-    <h3>4. JavaScript DOM + Fetch Project</h3>
-    <p>
-        Dynamic webpage that loads JSON data and updates the interface using the DOM API.<br>
-        <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/Proyecto%20Intermodular/102-%20ejercicios%20practicos%20segundo%20trimestre/102%20Leer%20JSON/004%20modelo%20mas%20completo/002%20platilla%20fetch.html" target="_blank">
-            View project on GitHub
-        </a>
-    </p>
+        /* LEFT PANEL */
+        #left {
+            width: 25%;
+            background: #252526;
+            padding: 25px;
+            border-right: 1px solid #333;
+        }
 
-    <h3>5. Flask Application (Python + MySQL)</h3>
-    <p>
-        Small Flask-based backoffice application built with Python, Jinja templates and a MySQL database.
-        Demonstrates backend routing, dynamic template rendering, and real database interaction.<br>
-        <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/Proyecto%20Intermodular/102-%20ejercicios%20practicos%20segundo%20trimestre/103%20Jinja/006%20backoffice%20con%20mysql.py" target="_blank">
-            View project on GitHub
-        </a>
-    </p>
-</section>
+        #left h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #569CD6;
+            border-bottom: 1px solid #333;
+            padding-bottom: 3px;
+        }
 
-<section>
-    <h2>Curriculum Vitae & Portafolio</h2>
+        #left ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0 0 22px 0;
+        }
 
-    <div style="text-align:center; margin-top:20px;">
-        <a href="https://oscarsorensen.github.io/OscarsCV/" target="_blank">
-            <img src="noname3.png" height="80" alt="CV Link">
-        </a>
-    </div>
-</section>
+        #left ul li {
+            margin-bottom: 10px;
+            color: #CCC;
+        }
+
+        #left a {
+            color: #CCC;
+            text-decoration: none;
+        }
+
+        #left a:hover {
+            color: #4FC1FF;
+        }
+
+        /* RIGHT PANEL */
+        #right {
+            width: 75%;
+            padding: 35px;
+        }
+
+        #right h1 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #DCDCAA;
+        }
+
+        #right h2 {
+            color: #C586C0;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        #right section {
+            margin-bottom: 35px;
+        }
+
+        #right h3 {
+            color: #569CD6;
+            font-size: 16px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+        }
+
+        #right p {
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .project {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            color: #DCDCAA;
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        .project a {
+            color: #4FC1FF;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- LEFT PANEL -->
+    <section id="left">
+
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="https://oscarsorensen.github.io/OscarsCV/">Curriculum Vitae</a></li>
+            <li><a href="https://oscarsorensen.github.io/Portafolio/">Portfolio</a></li>
+            <li><a href="https://github.com/oscarsorensen/">GitHub</a></li>
+        </ul>
+
+        <h3>Contact</h3>
+        <ul>
+            <li>oscar081100@gmail.com</li>
+            <li>Valencia, Spain</li>
+        </ul>
+
+    </section>
+
+
+
+    <!-- RIGHT PANEL -->
+    <section id="right">
+
+        <h1>Oscar Sørensen</h1>
+        <h2>Portfolio Projects</h2>
+
+        <section>
+            <h3>Featured Projects</h3>
+
+            <div class="project">
+                <div class="project-title">Python CRUD Application (MySQL)</div>
+                <p>
+                    Menu-based console program that performs CRUD operations directly on a MySQL database using Python.<br>
+                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/2Prog/examprog.py" target="_blank">
+                        View on GitHub
+                    </a>
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-title">SQL Blog / Portfolio Database</div>
+                <p>
+                    Relational MySQL database with normalized tables, foreign keys, sample data, JOIN operations, and a reusable SQL view.<br>
+                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/1BDD/examfixed.sql" target="_blank">
+                        View on GitHub
+                    </a>
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-title">HTML/CSS Blog Template</div>
+                <p>
+                    Clean responsive blog layout using semantic HTML and structured CSS.<br>
+                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/3LDM/EXAM.LDM.html" target="_blank">
+                        View on GitHub
+                    </a>
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-title">JavaScript DOM + Fetch</div>
+                <p>
+                    Dynamic webpage that loads external JSON files and updates the interface using DOM manipulation.<br>
+                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/Proyecto%20Intermodular/102-%20ejercicios%20practicos%20segundo%20trimestre/102%20Leer%20JSON/004%20modelo%20mas%20completo/002%20platilla%20fetch.html" target="_blank">
+                        View on GitHub
+                    </a>
+                </p>
+            </div>
+
+            <div class="project">
+                <div class="project-title">Flask Application (Python + MySQL)</div>
+                <p>
+                    Small Flask-based backoffice app that uses Jinja templates and real SQL interactions with a MySQL database.<br>
+                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/Proyecto%20Intermodular/102-%20ejercicios%20practicos%20segundo%20trimestre/103%20Jinja/006%20backoffice%20con%20mysql.py" target="_blank">
+                        View on GitHub
+                    </a>
+                </p>
+            </div>
+
+        </section>
+
+    </section>
+
+</body>
+</html>
