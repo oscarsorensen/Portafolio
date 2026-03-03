@@ -93,20 +93,24 @@
         }
 
         /* CARDS */
-        .card {
+        a.card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
             background: #212121;
             border: 1px solid #303030;
             border-radius: 10px;
             padding: 26px 29px;
             margin-bottom: 14px;
+            cursor: pointer;
             transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .card:hover {
-            background: #262626;
-            border-color: #505050;
+        a.card:hover {
+            background: #252525;
+            border-color: #60A5FA;
             transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(96, 165, 250, 0.15);
         }
 
         .card-header {
@@ -119,19 +123,17 @@
         .card h3 {
             font-size: 18px;
             font-weight: 500;
-            color: #F2F2F2;
         }
 
-        .card .github-link {
+        .github-label {
             font-size: 14px;
-            color: #686868;
-            text-decoration: none;
-            transition: color 0.15s;
+            color: #505050;
             white-space: nowrap;
             padding-left: 19px;
+            transition: color 0.15s;
         }
 
-        .card .github-link:hover {
+        a.card:hover .github-label {
             color: #60A5FA;
         }
 
@@ -149,14 +151,21 @@
         }
 
         .tag {
-            background: #272727;
-            border: 1px solid #383838;
             border-radius: 4px;
             padding: 3px 11px;
             font-size: 13px;
-            color: #8C8C8C;
             font-family: 'Fira Code', monospace;
+            border: 1px solid;
         }
+
+        /* TAG COLOURS */
+        .tag-blue   { color: #60A5FA; background: #0A1E30; border-color: #1D4060; }
+        .tag-purple { color: #A78BFA; background: #180F30; border-color: #3D2680; }
+        .tag-orange { color: #FB923C; background: #280E00; border-color: #6A3010; }
+        .tag-green  { color: #34D399; background: #041A12; border-color: #0A4030; }
+        .tag-yellow { color: #FCD34D; background: #281E00; border-color: #6A5200; }
+        .tag-cyan   { color: #67E8F9; background: #041820; border-color: #0A4050; }
+        .tag-violet { color: #C084FC; background: #1E0830; border-color: #501080; }
     </style>
 </head>
 
@@ -174,46 +183,46 @@
     <section>
         <h2>Personal Projects</h2>
 
-        <div class="card">
+        <a class="card" href="(link here)" target="_blank">
             <div class="card-header">
-                <h3>FirstListing</h3>
-                <a href="(link here)" class="github-link" target="_blank">GitHub &rarr;</a>
+                <h3 style="color: #60A5FA;">FirstListing</h3>
+                <span class="github-label">GitHub &rarr;</span>
             </div>
             <p>B2B SaaS tool for the Spanish real estate market that detects when property listings have been copied to other portals and identifies the original author. Full pipeline: web crawler &rarr; GPT-4.1-mini structured extraction from raw HTML &rarr; SQL duplicate scoring &rarr; AI description comparison. Includes an admin dashboard with real-time log streaming, role-based auth (agent / private / admin), subscription model, and PID-based process management.</p>
             <div class="tags">
-                <span class="tag">PHP</span>
-                <span class="tag">Python</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">OpenAI API</span>
+                <span class="tag tag-purple">PHP</span>
+                <span class="tag tag-blue">Python</span>
+                <span class="tag tag-orange">MySQL</span>
+                <span class="tag tag-green">OpenAI API</span>
             </div>
-        </div>
+        </a>
 
-        <div class="card">
+        <a class="card" href="(link here)" target="_blank">
             <div class="card-header">
-                <h3>AI-Oscar 2.0</h3>
-                <a href="(link here)" class="github-link" target="_blank">GitHub &rarr;</a>
+                <h3 style="color: #A78BFA;">AI-Oscar 2.0</h3>
+                <span class="github-label">GitHub &rarr;</span>
             </div>
             <p>Personal AI persona system running locally on a Python HTTP server. Uses a custom RAG architecture: knowledge base loaded from JSONL, ranked retrieval via weighted similarity scoring, and Ollama for local LLM response generation. PHP control interface manages the server process via PID file.</p>
             <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">PHP</span>
-                <span class="tag">Ollama</span>
-                <span class="tag">Local LLM</span>
+                <span class="tag tag-blue">Python</span>
+                <span class="tag tag-purple">PHP</span>
+                <span class="tag tag-green">Ollama</span>
+                <span class="tag tag-purple">Local LLM</span>
             </div>
-        </div>
+        </a>
 
-        <div class="card">
+        <a class="card" href="(link here)" target="_blank">
             <div class="card-header">
-                <h3>ChamitosMC</h3>
-                <a href="(link here)" class="github-link" target="_blank">GitHub &rarr;</a>
+                <h3 style="color: #34D399;">ChamitosMC</h3>
+                <span class="github-label">GitHub &rarr;</span>
             </div>
             <p>Group movie club platform with full CRUD for movies, categories, ratings, and reviews. User authentication with hashed passwords, admin backend, SQL views for rating averages, and relational integrity via foreign keys with CASCADE.</p>
             <div class="tags">
-                <span class="tag">PHP</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">HTML/CSS</span>
+                <span class="tag tag-purple">PHP</span>
+                <span class="tag tag-orange">MySQL</span>
+                <span class="tag tag-orange">HTML/CSS</span>
             </div>
-        </div>
+        </a>
 
     </section>
 
@@ -221,57 +230,57 @@
         <h2>CEAC Coursework</h2>
         <p class="section-intro">Selected exercises from my DAW coursework at CEAC &mdash; included to show curriculum coverage and fundamentals.</p>
 
-        <div class="card">
+        <a class="card" href="(link here)" target="_blank">
             <div class="card-header">
-                <h3>NPC Game with Trigonometric Movement</h3>
-                <a href="(link here)" class="github-link" target="_blank">GitHub &rarr;</a>
+                <h3 style="color: #FCD34D;">NPC Game with Trigonometric Movement</h3>
+                <span class="github-label">GitHub &rarr;</span>
             </div>
             <p>Browser-rendered game built in Python and served via Flask. NPCs move using sine/cosine vector calculations with collision detection, built incrementally across 12 steps.</p>
             <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">Flask</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Canvas</span>
+                <span class="tag tag-blue">Python</span>
+                <span class="tag tag-blue">Flask</span>
+                <span class="tag tag-yellow">JavaScript</span>
+                <span class="tag tag-cyan">Canvas</span>
             </div>
-        </div>
+        </a>
 
-        <div class="card">
+        <a class="card" href="(link here)" target="_blank">
             <div class="card-header">
-                <h3>Space Shooter &mdash; OOP with Canvas</h3>
-                <a href="(link here)" class="github-link" target="_blank">GitHub &rarr;</a>
+                <h3 style="color: #F87171;">Space Shooter &mdash; OOP with Canvas</h3>
+                <span class="github-label">GitHub &rarr;</span>
             </div>
             <p>Browser game built step by step using object-oriented JavaScript: ship, rock, and bullet classes with inheritance, keyboard events, and canvas rendering.</p>
             <div class="tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML Canvas</span>
+                <span class="tag tag-yellow">JavaScript</span>
+                <span class="tag tag-cyan">HTML Canvas</span>
             </div>
-        </div>
+        </a>
 
-        <div class="card">
+        <a class="card" href="(link here)" target="_blank">
             <div class="card-header">
-                <h3>Tienda Online &mdash; Incremental E-commerce Build</h3>
-                <a href="(link here)" class="github-link" target="_blank">GitHub &rarr;</a>
+                <h3 style="color: #FB923C;">Tienda Online &mdash; Incremental E-commerce Build</h3>
+                <span class="github-label">GitHub &rarr;</span>
             </div>
             <p>7-stage incremental build of a full e-commerce frontend: product catalog, product page, cart, checkout, and SQL schema. Each stage is a complete snapshot of the app at that point.</p>
             <div class="tags">
-                <span class="tag">PHP</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">HTML/CSS</span>
+                <span class="tag tag-purple">PHP</span>
+                <span class="tag tag-orange">MySQL</span>
+                <span class="tag tag-orange">HTML/CSS</span>
             </div>
-        </div>
+        </a>
 
-        <div class="card">
+        <a class="card" href="(link here)" target="_blank">
             <div class="card-header">
-                <h3>ChromaDB Semantic Search</h3>
-                <a href="(link here)" class="github-link" target="_blank">GitHub &rarr;</a>
+                <h3 style="color: #C084FC;">ChromaDB Semantic Search</h3>
+                <span class="github-label">GitHub &rarr;</span>
             </div>
             <p>Vector database pipeline built from scratch: manual cosine similarity implementation, ChromaDB with persistent storage, and sentence_transformers (MiniLM-L12-v2). Full semantic search loop that ranks stored content by cosine distance from user input.</p>
             <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">ChromaDB</span>
-                <span class="tag">sentence_transformers</span>
+                <span class="tag tag-blue">Python</span>
+                <span class="tag tag-violet">ChromaDB</span>
+                <span class="tag tag-blue">sentence_transformers</span>
             </div>
-        </div>
+        </a>
 
     </section>
 
