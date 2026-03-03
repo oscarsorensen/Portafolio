@@ -120,6 +120,18 @@
         .project a:hover {
             text-decoration: underline;
         }
+
+        .stack {
+            color: #6A9955;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .section-intro {
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
     </style>
 </head>
 
@@ -154,66 +166,75 @@
         <h2>Portfolio Projects</h2>
 
         <section>
-            <h3>Featured Projects</h3>
+            <h3>Personal Projects</h3>
 
             <div class="project">
-                <div class="project-title">Localhost Dashboard</div>
+                <div class="project-title">FirstListing</div>
                 <p>
-                    Local PHP dashboard that scans and organizes all my CEAC coursework, with file metadata, search and GitHub sync<br>
-                    <a href="https://github.com/oscarsorensen/localhost-dashboard" target="_blank">
-                        View on GitHub
-                    </a>
+                    B2B SaaS tool for the Spanish real estate market that detects when property listings have been copied to other portals and identifies the original author. Full pipeline: web crawler → GPT-4.1-mini structured extraction from raw HTML → SQL duplicate scoring → AI description comparison. Includes an admin dashboard with real-time log streaming, role-based auth (agent / private / admin), subscription model, and PID-based process management.
                 </p>
+                <div class="stack">PHP · Python · MySQL · OpenAI API</div>
+                <p><a href="(link here)" target="_blank">View on GitHub</a></p>
             </div>
 
             <div class="project">
-                <div class="project-title">Python CRUD Application (MySQL)</div>
+                <div class="project-title">AI-Oscar 2.0</div>
                 <p>
-                    Menu-based console program that performs CRUD operations directly on a MySQL database using Python.<br>
-                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/2Prog/examprog.py" target="_blank">
-                        View on GitHub
-                    </a>
+                    Personal AI persona system running locally on a Python HTTP server. Uses a custom RAG architecture: knowledge base loaded from JSONL, ranked retrieval via weighted similarity scoring, and Ollama for local LLM response generation. PHP control interface manages the server process via PID file.
                 </p>
+                <div class="stack">Python · PHP · Ollama · Local LLM</div>
+                <p><a href="(link here)" target="_blank">View on GitHub</a></p>
             </div>
 
             <div class="project">
-                <div class="project-title">SQL Blog / Portfolio Database</div>
+                <div class="project-title">ChamitosMC</div>
                 <p>
-                    Relational MySQL database with normalized tables, foreign keys, sample data, JOIN operations, and a reusable SQL view.<br>
-                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/1BDD/examfixed.sql" target="_blank">
-                        View on GitHub
-                    </a>
+                    Group movie club platform with full CRUD for movies, categories, ratings, and reviews. User authentication with hashed passwords, admin backend, SQL views for rating averages, and relational integrity via foreign keys with CASCADE.
                 </p>
+                <div class="stack">PHP · MySQL · HTML/CSS</div>
+                <p><a href="(link here)" target="_blank">View on GitHub</a></p>
+            </div>
+
+        </section>
+
+        <section>
+            <h3>CEAC Coursework</h3>
+            <p class="section-intro">Selected exercises from my DAW coursework at CEAC — included to show curriculum coverage and fundamentals.</p>
+
+            <div class="project">
+                <div class="project-title">NPC Game with Trigonometric Movement</div>
+                <p>
+                    Browser-rendered game built in Python and served via Flask. NPCs move using sine/cosine vector calculations with collision detection, built incrementally across 12 steps.
+                </p>
+                <div class="stack">Python · Flask · JavaScript · Canvas</div>
+                <p><a href="(link here)" target="_blank">View on GitHub</a></p>
             </div>
 
             <div class="project">
-                <div class="project-title">HTML/CSS Blog Template</div>
+                <div class="project-title">Space Shooter — OOP with Canvas</div>
                 <p>
-                    Clean responsive blog layout using semantic HTML and structured CSS.<br>
-                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/z.Exams/1.Tri-Exam/3LDM/EXAM.LDM.html" target="_blank">
-                        View on GitHub
-                    </a>
+                    Browser game built step by step using object-oriented JavaScript: ship, rock, and bullet classes with inheritance, keyboard events, and canvas rendering.
                 </p>
+                <div class="stack">JavaScript · HTML Canvas</div>
+                <p><a href="(link here)" target="_blank">View on GitHub</a></p>
             </div>
 
             <div class="project">
-                <div class="project-title">JavaScript DOM + Fetch</div>
+                <div class="project-title">Tienda Online — Incremental E-commerce Build</div>
                 <p>
-                    Dynamic webpage that loads external JSON files and updates the interface using DOM manipulation.<br>
-                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/Proyecto%20Intermodular/102-%20ejercicios%20practicos%20segundo%20trimestre/102%20Leer%20JSON/004%20modelo%20mas%20completo/002%20platilla%20fetch.html" target="_blank">
-                        View on GitHub
-                    </a>
+                    7-stage incremental build of a full e-commerce frontend: product catalog, product page, cart, checkout, and SQL schema. Each stage is a complete snapshot of the app at that point.
                 </p>
+                <div class="stack">PHP · MySQL · HTML/CSS</div>
+                <p><a href="(link here)" target="_blank">View on GitHub</a></p>
             </div>
 
             <div class="project">
-                <div class="project-title">Flask Application (Python + MySQL)</div>
+                <div class="project-title">ChromaDB Semantic Search</div>
                 <p>
-                    Small Flask-based backoffice app that uses Jinja templates and real SQL interactions with a MySQL database.<br>
-                    <a href="https://github.com/oscarsorensen/Todo-CEAC/blob/main/Proyecto%20Intermodular/102-%20ejercicios%20practicos%20segundo%20trimestre/103%20Jinja/006%20backoffice%20con%20mysql.py" target="_blank">
-                        View on GitHub
-                    </a>
+                    Vector database pipeline built from scratch: manual cosine similarity implementation, ChromaDB with persistent storage, and sentence_transformers (MiniLM-L12-v2). Full semantic search loop that ranks stored content by cosine distance from user input.
                 </p>
+                <div class="stack">Python · ChromaDB · sentence_transformers</div>
+                <p><a href="(link here)" target="_blank">View on GitHub</a></p>
             </div>
 
         </section>
